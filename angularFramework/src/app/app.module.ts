@@ -9,16 +9,26 @@ import { UserComponent } from './components/user/user.component';
 import { DataService } from './services/data.service';
 //http module
 import { HttpModule } from '@angular/http';
+import { AboutComponent } from './components/about/about.component';
+//router module
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: '', component: UserComponent},
+  {path: 'about', component:AboutComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    RouterModule.forRoot(appRoutes)
 
   ],
   providers: [DataService],

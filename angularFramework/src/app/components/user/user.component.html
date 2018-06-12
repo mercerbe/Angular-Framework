@@ -5,9 +5,12 @@
   <li>Address: {{address.street}}, {{address.city}} {{address.state}}</li>
 </ul>
 
-<button (click)='onClick()'>Click Here</button>
+<button (click)='onClick()'>Add Language</button>
+<button (click)='toggleEdit()'>Edit User</button>
+
 
 <h2>Edit User</h2>
+<div *ngIf=isEdit>
 <form class="">
   <div class="">
     <label for="name">Name: </label><br>
@@ -34,6 +37,7 @@
     <input type="text" [(ngModel)]="address.state" name="state">
   </div>
 </form>
+</div>
 
 <h2>Languages:</h2>
 <form (submit)="addLanguage(language.value)">

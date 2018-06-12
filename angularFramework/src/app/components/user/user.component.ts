@@ -13,6 +13,7 @@ export class UserComponent implements OnInit {
   address: Address;
   languages:string[];
   posts:Post[];
+  isEdit:boolean = false;
 
   constructor(private dataService: DataService) {
     console.log('constructor ran...');
@@ -53,6 +54,10 @@ export class UserComponent implements OnInit {
         this.languages.splice(i, 1);
       }
     }
+  }
+
+  toggleEdit(){
+    this.isEdit = !this.isEdit;
   }
 
 }
