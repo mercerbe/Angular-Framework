@@ -1,4 +1,4 @@
-# Angular Dev Tracking
+# Angular Team Development Tracker
 > Track your development with your team
 
 Node | Express | Angular | Bootstrap
