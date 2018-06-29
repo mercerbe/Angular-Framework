@@ -45,12 +45,12 @@ $ brew install teamDevTracker
 $ npm install
 ```
 
-## Team
+## Contributors
 
 | <a href="http://github.com/mercerbe" target="_blank">**Ben Mercer**</a> |
 | :---: |
-| [![Ben Mercer](https://avatars3.githubusercontent.com/u/35779366?s=150&v=3)](http://github.com/mercerbe) | 
-| <a href="http://github.com/mercerbe" target="_blank">`github.com/mercerbe`</a> | 
+| [![Ben Mercer](https://avatars3.githubusercontent.com/u/35779366?s=150&v=3)](http://github.com/mercerbe) |
+| <a href="http://github.com/mercerbe" target="_blank">`github.com/mercerbe`</a> |
 
 
 
