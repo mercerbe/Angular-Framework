@@ -18,13 +18,18 @@ export class LogService {
   private logSource = new BehaviorSubject<Log>({id: null, text: null, date: null});
   selectedLog = this.logSource.asObservable();
 
-  constructor() {
-    this.logs = [
-      {id: '1', text: 'Generated Components', date: new Date ('1/1/2018 9:33:10')},
-      {id: '2', text: 'test logs', date: new Date ('1/1/2018 9:40:12')},
-      {id: '3', text: 'seeding logs', date: new Date ('1/1/2018 10:10:45')},
+  private stateSource = new BehaviorSubject<boolean>
+    (true);
+    stateClear = this.stateSource.asObservable();
 
-    ]
+  constructor() {
+    // this.logs = [
+    //   {id: '1', text: 'Generated Components', date: new Date ('1/1/2018 9:33:10')},
+    //   {id: '2', text: 'test logs', date: new Date ('1/1/2018 9:40:12')},
+    //   {id: '3', text: 'seeding logs', date: new Date ('1/1/2018 10:10:45')},
+    //
+    // ]
+    this.logs = [];
   }
 
   getLogs(): Observable<Log[]> {
@@ -33,5 +38,30 @@ export class LogService {
 
   setFormLog(log: Log) {
     this.logSource.next(log);
+  }
+
+  addLog(log: Log) {
+    this.logs.unshift(log);
+  }
+
+  updateLog(log: Log){
+    this.logs.forEach((current, index)=> {
+      if(log.id === current.id) {
+        this.logs.splice(index, 1)
+      }
+    });
+    this.logs.unshift(log);
+  }
+
+  deleteLog(log: Log){
+    this.logs.forEach((current, index)=> {
+      if(log.id === current.id) {
+        this.logs.splice(index, 1)
+      }
+    });
+  }
+
+  clearState() {
+    this.stateSource.next(true);
   }
 }
