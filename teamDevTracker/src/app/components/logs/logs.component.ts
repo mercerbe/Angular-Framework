@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LogService } from '../../services/log.service';
+import { Log } from '../../models/Log';
 
 @Component({
   selector: 'app-logs',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogsComponent implements OnInit {
 
-  constructor() { }
+  logs: Log[];
+
+  constructor(private logService: LogService) { }
 
   ngOnInit() {
+    this.logService.getLogs().subscribe(logs => {
+      this.logs = logs;
+    });
+  }
+
+  onSelect(log: Log) {
+    console.log(log);
+    this.logService.setFormLog(log);
   }
 
 }

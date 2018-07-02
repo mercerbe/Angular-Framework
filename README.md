@@ -17,7 +17,7 @@ You can demo this web app on heroku at:  [teamDevTracker](https://tbd.herokuapp.
 
 To run the application locally, first clone this repository with the following command:
 
-	git clone https://github.com/mercerbe/SocialRent.git
+	git clone https://github.com/mercerbe/TeamDevTracker-Angular.git
 
 Next, install the application dependencies:
 
@@ -71,4 +71,4 @@ Your patches are welcome! Here's our suggested workflow:
 
 ## Copyright and attribution
 
-Copyright (c) 2016. Released under the [MIT License](https://github.com/mercerbe/teamDevTracker/LICENSE).
+Copyright (c) 2016. Released under the [MIT License](https://github.com/mercerbe/teamDevTracker-Angular/teamDevTracker/LICENSE).
